@@ -32,37 +32,132 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+    macros {
+        euro_sign: euro_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp NUMBER_2>;
+            label = "EURO_SIGN";
+        };
+
+        uah_sign: uah_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AMPERSAND &kp U &kp A &kp H>;
+            label = "UAH_SIGN";
+        };
+
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp NUMBER_4>;
+            label = "SCREENSHOT";
+        };
+
+        move2lefthalf: move2lefthalf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp N7>;
+            label = "MOVE2LEFTHALF";
+        };
+
+        move2righthalf: move2righthalf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp N8>;
+            label = "MOVE2RIGHTHALF";
+        };
+
+        move2upperhalf: move2upperhalf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp N9>;
+            label = "MOVE2UPPERHALF";
+        };
+
+        move2lefthird: move2lefthird {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp NUMBER_4>;
+            label = "MOVE2LEFTHIRD";
+        };
+
+        move2middlethird: move2middlethird {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp N5>;
+            label = "MOVE2MIDDLETHIRD";
+        };
+
+        move2rightthird: move2rightthird {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp NUMBER_6>;
+            label = "MOVE2RIGHTTHIRD";
+        };
+
+        move2lowerhalf: move2lowerhalf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp NUMBER_3>;
+            label = "MOVE2LOWERHALF";
+        };
+
+        push2leftdisplay: push2leftdisplay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp NUMBER_1>;
+            label = "PUSH2LEFTDISPLAY";
+        };
+
+        push2rightdisplay: push2rightdisplay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp NUMBER_2>;
+            label = "PUSH2RIGHTDISPLAY";
+        };
+    };
+
+    behaviors {
+        td: td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BS";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp BACKSPACE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Letters {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y      &kp U    &kp I      &kp O    &kp P      &kp LEFT_BRACE
-&kp TAB    &kp A  &kp S  &kp D    &kp F    &kp G        &kp H      &kp J    &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_BRACE
-                         &mo ADJ  &mo LWR  &kp SPACE    &kp ENTER  &mo LWR  &mo RSE
+&kp ESC    &mt EXCLAMATION Q   &mt AT_SIGN W       &mt HASH E      &mt DOLLAR R      &mt PERCENT T    &mt CARET Y  &mt AMPERSAND U   &mt LS(ASTERISK) I  &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P     &kp BACKSPACE
+&kp TAB    &mt LEFT_CONTROL A  &mt LEFT_COMMAND S  &mt LEFT_ALT D  &mt LEFT_SHIFT F  &kp G            &kp H        &mt LEFT_SHIFT J  &mt LEFT_ALT K      &mt LEFT_COMMAND I      &mt LEFT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z               &kp X               &kp C           &kp V             &kp B            &kp N        &kp M             &kp COMMA           &kp DOT                 &kp SLASH                   &kp DEL
+                                                   &mo ADJ         &mo LWR           &kp SPACE        &kp ENTER    &mo LWR           &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_u_d>;
         };
 
-        lower_layer {
+        command_layer {
             bindings = <
-&kp GRAVE  &none      &none      &none        &none     &none        &none      &kp N7   &kp N8   &kp N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&kp TAB    &none      &none      &none        &kp LBKT  &kp RBKT     &none      &kp N4   &kp N5   &kp N6  &kp KP_PLUS      &kp KP_MINUS
-&kp LSHFT  &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC     &kp N0     &kp N1   &kp N2   &kp N3  &kp KP_COMMA     &kp DOT
-                                 &mo ADJ      &mo LWR   &kp SPACE    &kp ENTER  &mo LWR  &mo RSE
+&kp GRAVE  &none              &none          &none             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp PIPE   &kp N7   &kp N8   &kp N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp TAB    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT              &kp RBKT                 &kp TILDE  &kp N4   &kp N5   &kp N6  &kp KP_PLUS      &kp KP_MINUS
+&kp LSHFT  &kp EQUAL          &kp MINUS      &kp KP_PLUS       &kp LBRC              &kp RBRC                 &kp N0     &kp N1   &kp N2   &kp N3  &kp KP_COMMA     &kp DOT
+                                             &mo ADJ           &mo LWR               &kp SPACE                &kp ENTER  &mo LWR  &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
         };
 
-        raise_layer {
+        control_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3     &kp F4       &kp F5   &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
-&none   &kp INS  &kp PSCRN  &kp K_CMENU  &none    &none        &kp PG_UP  &kp HOME  &kp UP    &kp END    &none    &none
-&none   &none    &none      &none        &none    &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-                            &mo ADJ      &mo LWR  &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
+&kp F1  &kp F2      &kp F3      &kp F4       &kp F5   &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11      &kp F12
+&none   &kp INS     &kp PSCRN   &kp K_CMENU  &none    &none        &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot  &none
+&none   &kp DOLLAR  &euro_sign  &uah_sign    &none    &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL      &kp BSPC
+                                &mo ADJ      &mo LWR  &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
@@ -70,10 +165,10 @@
 
         adjust_layer {
             bindings = <
-&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR   &out OUT_USB    &none        &none        &none    &none  &none  &none
-&none         &none         &none         &none           &none        &none           &none        &none        &none    &none  &none  &none
-&sys_reset    &bootloader   &none         &studio_unlock  &ind IND_ON  &ind BAT_ST     &ind IND_ON  &ind BAT_ST  &none    &none  &none  &none
-                                          &mo ADJ         &mo LWR      &kp SPACE       &kp ENTER    &mo LWR      &mo RSE
+&out OUT_BLE          &bt BT_SEL 0          &bt BT_SEL 1                       &bt BT_SEL 2     &bt BT_CLR      &out OUT_USB        &none        &push2leftdisplay  &push2rightdisplay  &move2upperhalf    &none            &none
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_SEARCH  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT   &move2lefthird     &move2lefthalf      &move2middlethird  &move2righthalf  &move2rightthird
+&sys_reset            &bootloader           &none                              &studio_unlock   &ind IND_ON     &ind BAT_ST         &ind IND_ON  &ind BAT_ST        &none               &move2lowerhalf    &none            &none
+                                                                               &mo ADJ          &mo LWR         &kp SPACE           &kp ENTER    &mo LWR            &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
