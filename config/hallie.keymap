@@ -43,7 +43,7 @@
         uah_sign: uah_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp AMPERSAND &kp L &kp A &kp K &kp SPACE>;
+            bindings = <&kp AMPERSAND &kp I &kp A &kp M &kp SPACE>;
             label = "UAH_SIGN";
         };
 
@@ -57,63 +57,63 @@
         move2lefthalf: move2lefthalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp N7 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_7 &kt LEFT_CONTROL>;
             label = "MOVE2LEFTHALF";
         };
 
         move2righthalf: move2righthalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp N8 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_8 &kt LEFT_CONTROL>;
             label = "MOVE2RIGHTHALF";
         };
 
         move2upperhalf: move2upperhalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp N9 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_9 &kt LEFT_CONTROL>;
             label = "MOVE2UPPERHALF";
         };
 
         move2lefthird: move2lefthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp NUMBER_4 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_4 &kt LEFT_CONTROL>;
             label = "MOVE2LEFTHIRD";
         };
 
         move2middlethird: move2middlethird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp N5 &kt LEFT_CONTROL>;
+            bindings = <&kp LEFT_CONTROL &kp KP_NUMBER_5 &kt LEFT_CONTROL>;
             label = "MOVE2MIDDLETHIRD";
         };
 
         move2rightthird: move2rightthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp NUMBER_6 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_6 &kt LEFT_CONTROL>;
             label = "MOVE2RIGHTTHIRD";
         };
 
         move2lowerhalf: move2lowerhalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp NUMBER_3 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_3 &kt LEFT_CONTROL>;
             label = "MOVE2LOWERHALF";
         };
 
         push2leftdisplay: push2leftdisplay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp NUMBER_1 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_1 &kt LEFT_CONTROL>;
             label = "PUSH2LEFTDISPLAY";
         };
 
         push2rightdisplay: push2rightdisplay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_CONTROL &kp NUMBER_2 &kt LEFT_CONTROL>;
+            bindings = <&kt LEFT_CONTROL &kp KP_NUMBER_2 &kt LEFT_CONTROL>;
             label = "PUSH2RIGHTDISPLAY";
         };
 
