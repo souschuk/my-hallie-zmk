@@ -36,85 +36,92 @@
         euro_sign: euro_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT &kp NUMBER_2>;
+            bindings = <&kt LEFT_ALT &kt LEFT_SHIFT &kp NUMBER_2 &kt LEFT_ALT &kt LEFT_SHIFT>;
             label = "EURO_SIGN";
         };
 
         uah_sign: uah_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp AMPERSAND &kp U &kp A &kp H>;
+            bindings = <&kp AMPERSAND &kp L &kp A &kp K &kp SPACE>;
             label = "UAH_SIGN";
         };
 
         screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp NUMBER_4>;
+            bindings = <&kt LEFT_COMMAND &kt LEFT_SHIFT &kp NUMBER_4 &kt LEFT_COMMAND &kt LEFT_SHIFT>;
             label = "SCREENSHOT";
         };
 
         move2lefthalf: move2lefthalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp N7>;
+            bindings = <&kt LEFT_CONTROL &kp N7 &kt LEFT_CONTROL>;
             label = "MOVE2LEFTHALF";
         };
 
         move2righthalf: move2righthalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp N8>;
+            bindings = <&kt LEFT_CONTROL &kp N8 &kt LEFT_CONTROL>;
             label = "MOVE2RIGHTHALF";
         };
 
         move2upperhalf: move2upperhalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp N9>;
+            bindings = <&kt LEFT_CONTROL &kp N9 &kt LEFT_CONTROL>;
             label = "MOVE2UPPERHALF";
         };
 
         move2lefthird: move2lefthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp NUMBER_4>;
+            bindings = <&kt LEFT_CONTROL &kp NUMBER_4 &kt LEFT_CONTROL>;
             label = "MOVE2LEFTHIRD";
         };
 
         move2middlethird: move2middlethird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp N5>;
+            bindings = <&kp LEFT_CONTROL &kp N5 &kt LEFT_CONTROL>;
             label = "MOVE2MIDDLETHIRD";
         };
 
         move2rightthird: move2rightthird {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp NUMBER_6>;
+            bindings = <&kt LEFT_CONTROL &kp NUMBER_6 &kt LEFT_CONTROL>;
             label = "MOVE2RIGHTTHIRD";
         };
 
         move2lowerhalf: move2lowerhalf {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp NUMBER_3>;
+            bindings = <&kt LEFT_CONTROL &kp NUMBER_3 &kt LEFT_CONTROL>;
             label = "MOVE2LOWERHALF";
         };
 
         push2leftdisplay: push2leftdisplay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp NUMBER_1>;
+            bindings = <&kt LEFT_CONTROL &kp NUMBER_1 &kt LEFT_CONTROL>;
             label = "PUSH2LEFTDISPLAY";
         };
 
         push2rightdisplay: push2rightdisplay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp NUMBER_2>;
+            bindings = <&kt LEFT_CONTROL &kp NUMBER_2 &kt LEFT_CONTROL>;
             label = "PUSH2RIGHTDISPLAY";
+        };
+
+        raycast: raycast {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_CONTROL &kp SPACE &kt LEFT_CONTROL>;
+            label = "RAYCAST";
         };
     };
 
@@ -155,7 +162,7 @@
         control_layer {
             bindings = <
 &kp F1  &kp F2      &kp F3      &kp F4       &kp F5   &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11      &kp F12
-&none   &kp INS     &kp PSCRN   &kp K_CMENU  &none    &none        &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot  &none
+&none   &kp INS     &kp PSCRN   &kp K_CMENU  &none    &raycast     &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot  &none
 &none   &kp DOLLAR  &euro_sign  &uah_sign    &none    &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL      &kp BSPC
                                 &mo ADJ      &mo LWR  &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
             >;
