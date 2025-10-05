@@ -132,9 +132,9 @@
 
         Letters {
             bindings = <
-&kp ESC    &mt EXCLAMATION Q   &mt AT_SIGN W       &mt HASH E      &mt DOLLAR R      &mt PERCENT T    &mt CARET Y  &mt AMPERSAND U   &mt LS(ASTERISK) I  &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P     &kp BACKSPACE
-&kp TAB    &mt LEFT_CONTROL A  &mt LEFT_COMMAND S  &mt LEFT_ALT D  &mt LEFT_SHIFT F  &kp G            &kp H        &mt LEFT_SHIFT J  &mt LEFT_ALT K      &mt LEFT_COMMAND I      &mt LEFT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z               &kp X               &kp C           &kp V             &kp B            &kp N        &kp M             &kp COMMA           &kp DOT                 &kp SLASH                   &kp DEL
+&kp ESC    &mt EXCLAMATION Q   &mt AT_SIGN W       &mt HASH E      &mt DOLLAR R      &mt PERCENT T    &mt CARET Y  &mt AMPERSAND U   &mt ASTERISK I  &mt LEFT_PARENTHESIS O  &mt RIGHT_PARENTHESIS P     &kp BACKSPACE
+&kp TAB    &mt LEFT_CONTROL A  &mt LEFT_COMMAND S  &mt LEFT_ALT D  &mt LEFT_SHIFT F  &kp G            &kp H        &mt LEFT_SHIFT J  &mt LEFT_ALT K  &mt LEFT_COMMAND I      &mt LEFT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z               &kp X               &kp C           &kp V             &kp B            &kp N        &kp M             &kp COMMA       &kp DOT                 &kp SLASH                   &kp DEL
                                                    &mo ADJ         &mo LWR           &kp SPACE        &kp ENTER    &mo LWR           &mo RSE
             >;
 
