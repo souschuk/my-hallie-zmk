@@ -32,6 +32,10 @@
 &mt {
     quick_tap_ms = <200>;
     tapping-term-ms = <300>;
+    bindings = <&kt>, <&kp>;
+
+    flavor = "tap-preferred";
+    quick-tap-ms = <1>;
 };
 
 / {
@@ -141,6 +145,19 @@
             label = "YI_APOSTROPHE";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp BACKSLASH>;
+        };
+
+        kt_on: kt_on {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KT_ON";
+            #binding-cells = <1>;
+        };
+
+        kt_off: kt_off {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KT_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
