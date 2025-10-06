@@ -171,8 +171,8 @@
 
         hades_layer {
             bindings = <
-&kp F1   &kp F2      &kp F3      &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11          &kp F12
-&kp INS  &kp DOLLAR  &euro_sign  &uah_sign  &kp K_CMENU  &raycast     &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot      &kp BACKSPACE
+&kp F1   &kp F2      &kp F3      &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11          &kp BACKSPACE
+&kp INS  &kp DOLLAR  &euro_sign  &uah_sign  &kp K_CMENU  &raycast     &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot      &kp F12
 &none    &none       &none       &uah_sign  &none        &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PRINTSCREEN  &kp DEL
                                  &mo ADJ    &mo LWR      &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
             >;
@@ -182,10 +182,10 @@
 
         helios_layer {
             bindings = <
-&out OUT_BLE          &bt BT_SEL 0          &bt BT_SEL 1                       &bt BT_SEL 2     &bt BT_CLR      &out OUT_USB        &none        &push2leftdisplay  &push2rightdisplay  &move2upperhalf    &none            &kp BACKSPACE
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_SEARCH  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT   &move2lefthird     &move2lefthalf      &move2middlethird  &move2righthalf  &move2rightthird
-&sys_reset            &bootloader           &none                              &studio_unlock   &ind IND_ON     &ind BAT_ST         &ind IND_ON  &ind BAT_ST        &none               &move2lowerhalf    &none            &kp DEL
-                                                                               &mo ADJ          &mo LWR         &kp SPACE           &kp ENTER    &mo LWR            &mo RSE
+&out OUT_BLE          &bt BT_SEL 0          &bt BT_SEL 1                       &bt BT_SEL 2     &bt BT_CLR      &out OUT_USB        &none        &kp LC(KP_NUMBER_1)  &kp LC(KP_NUMBER_2)  &kp LC(KP_NUMBER_9)  &none                &kp BACKSPACE
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_SEARCH  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT   &kp LC(KP_NUMBER_4)  &kp LC(KP_NUMBER_7)  &kp KP_NUMBER_5      &kp LC(KP_NUMBER_8)  &kp LC(KP_NUMBER_6)
+&sys_reset            &bootloader           &none                              &studio_unlock   &ind IND_ON     &ind BAT_ST         &ind IND_ON  &ind BAT_ST          &none                &kp LC(KP_NUMBER_3)  &none                &kp DEL
+                                                                               &mo ADJ          &mo LWR         &kp SPACE           &kp ENTER    &mo LWR              &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
