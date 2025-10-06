@@ -188,10 +188,10 @@
 
         hades_layer {
             bindings = <
-&kp F1   &kp F2      &kp F3      &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9    &kp F10    &kp F11          &kp BACKSPACE
-&kp INS  &kp DOLLAR  &euro_sign  &uah_sign  &kp K_CMENU  &raycast     &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot      &kp F12
-&none    &none       &none       &uah_sign  &none        &none        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PRINTSCREEN  &kp DEL
-                                 &mo ADJ    &mo LWR      &kp SPACE    &kp ENTER  &mo LWR   &mo RSE
+&kp F1   &kp F2      &kp F3      &kp F4     &kp F5       &kp F6               &kp F7     &kp F8    &kp F9    &kp F10    &kp F11          &kp BACKSPACE
+&kp INS  &kp DOLLAR  &euro_sign  &uah_sign  &kp K_CMENU  &raycast             &kp PG_UP  &kp HOME  &kp UP    &kp END    &screenshot      &kp F12
+&none    &none       &none       &uah_sign  &none        &kp RIGHT_CONTROL    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PRINTSCREEN  &kp DEL
+                                 &mo ADJ    &mo LWR      &kp SPACE            &kp ENTER  &mo LWR   &mo RSE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
